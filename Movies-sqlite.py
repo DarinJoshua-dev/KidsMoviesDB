@@ -8,7 +8,7 @@ cursor = connection.cursor()
 
 # Create a TABLE movies that stores values
 
-command="""CREATE TABLE IF NOT EXISTS movies(m_id INTEGER PRIMARY KEY, name TEXT, actor TEXT, actress TEXT, director TEXT, year of release INTEGER)"""
+command="""CREATE TABLE IF NOT EXISTS movies(m_id INTEGER PRIMARY KEY, name TEXT, director TEXT, actor TEXT, actress TEXT, year of release INTEGER)"""
 
 cursor.execute(command)
 
@@ -44,7 +44,7 @@ results1 = cursor.fetchall()
 
 print(results1)
 
-cursor.execute("SELECT name FROM movies WHERE actor ='Brad Bird'")
+cursor.execute("SELECT name FROM movies WHERE director ='Brad Bird'")
 
 results2 = cursor.fetchall()
 
